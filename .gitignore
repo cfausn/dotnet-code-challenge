@@ -246,6 +246,7 @@ Intermediate/
 *.sdf
 *.cachefile
 *.VC.db
+.vs/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt

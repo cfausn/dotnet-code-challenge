@@ -761,24 +761,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/cfausn/.nuget/packages/": {}
+    "C:\\Users\\Colin Fausnaught\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/CodeChallenge.csproj",
+      "projectUniqueName": "C:\\Users\\Colin Fausnaught\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
       "projectName": "CodeChallenge",
-      "projectPath": "/Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/CodeChallenge.csproj",
-      "packagesPath": "/Users/cfausn/.nuget/packages/",
-      "outputPath": "/Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/obj/",
+      "projectPath": "C:\\Users\\Colin Fausnaught\\Documents\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+      "packagesPath": "C:\\Users\\Colin Fausnaught\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Colin Fausnaught\\Documents\\dotnet-code-challenge\\CodeChallenge\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/cfausn/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Colin Fausnaught\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -825,7 +827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.419/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

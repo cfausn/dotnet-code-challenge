@@ -27,3 +27,37 @@
 /Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/obj/Debug/net6.0/CodeChallenge.pdb
 /Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/obj/Debug/net6.0/CodeChallenge.genruntimeconfig.cache
 /Users/cfausn/Documents/dotnet-code-challenge/CodeChallenge/obj/Debug/net6.0/ref/CodeChallenge.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\appsettings.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\resources\EmployeeSeedData.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\CodeChallenge.exe
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\CodeChallenge.deps.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\CodeChallenge.runtimeconfig.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\CodeChallenge.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\CodeChallenge.pdb
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.AssemblyReference.cache
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfoInputs.cache
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.AssemblyInfo.cs
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.CoreCompileInputs.cache
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets\msbuild.CodeChallenge.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets\msbuild.build.CodeChallenge.props
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CodeChallenge.props
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CodeChallenge.props
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\scopedcss\bundle\CodeChallenge.styles.css
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.csproj.CopyComplete
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\refint\CodeChallenge.dll
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.pdb
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\CodeChallenge.genruntimeconfig.cache
+C:\Users\Colin Fausnaught\Documents\dotnet-code-challenge\CodeChallenge\obj\Debug\net6.0\ref\CodeChallenge.dll

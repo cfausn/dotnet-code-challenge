@@ -1,4 +1,6 @@
 
+using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -9,6 +11,7 @@ using CodeCodeChallenge.Tests.Integration.Extensions;
 using CodeCodeChallenge.Tests.Integration.Helpers;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 
 namespace CodeCodeChallenge.Tests.Integration
 {
@@ -155,5 +158,42 @@ namespace CodeCodeChallenge.Tests.Integration
             Assert.AreEqual(2, reportingStructure.Employee.DirectReports.Count); // John has 2 direct reports: Paul and Ringo
         }
 
+        [TestMethod]
+        public void CreateCompensation_Returns_CreatedWithExpectedValues()
+        {
+            // Arrange
+            string employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f"; 
+            var compensation = new
+            {
+                salary = 60000,
+                effectiveDate = new DateTime(2023, 1, 1)
+            };
+            var requestContent = new StringContent(JsonConvert.SerializeObject(compensation), Encoding.UTF8, "application/json");
+
+            // Act
+            var response = _httpClient.PostAsync($"api/compensation/{employeeId}", requestContent).Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.Created, response.StatusCode);
+            var createdCompensation = JsonConvert.DeserializeObject<Compensation>(response.Content.ReadAsStringAsync().Result);
+            Assert.AreEqual(compensation.salary, createdCompensation.Salary);
+            Assert.AreEqual(compensation.effectiveDate, createdCompensation.EffectiveDate);
+        }
+
+        [TestMethod]
+        public void GetCompensationByEmployeeId_Returns_CompensationWithDirectReports()
+        {
+            // Arrange
+            string employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
+
+            // Act
+            var response = _httpClient.GetAsync($"api/compensation/{employeeId}").Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var compensation = JsonConvert.DeserializeObject<Compensation>(response.Content.ReadAsStringAsync().Result);
+            Assert.IsNotNull(compensation.Employee.DirectReports);
+            Assert.IsTrue(compensation.Employee.DirectReports != null && compensation.Employee.DirectReports.Any());
+        }
     }
 }
