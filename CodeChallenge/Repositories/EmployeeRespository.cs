@@ -30,8 +30,8 @@ namespace CodeChallenge.Repositories
         public Employee GetById(string id)
         {
             return _employeeContext.Employees
-                .Include(e => e.DirectReports) // Include DirectReports in the query for readability
-                .SingleOrDefault(e => e.EmployeeId == id);
+                .Include(e => e.DirectReports) 
+                .FirstOrDefault(e => e.EmployeeId == id);
         }
 
         public Task SaveAsync()

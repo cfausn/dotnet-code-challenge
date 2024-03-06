@@ -20,13 +20,21 @@ public class CompensationController : ControllerBase
     {
         try
         {
-            var salary = body.GetProperty("salary").GetDecimal(); // Use GetDecimal for numeric values
-            var effectiveDateString = body.GetProperty("effectiveDate").GetString(); // Retrieving as string
+            var salary = body.GetProperty("salary").GetDecimal(); 
+            var effectiveDateString = body.GetProperty("effectiveDate").GetString();
 
-            // Parse the effectiveDate string to DateTime
             if (!DateTime.TryParse(effectiveDateString, out var effectiveDate))
             {
                 return BadRequest("Invalid effectiveDate format.");
+            }
+            if (salary < 0)
+            {
+                return BadRequest("Salary must be a positive number.");
+            }
+
+            if (salary > 999000000)
+            {
+                return BadRequest("You're not Jeff Bezos.");
             }
 
             var compensation = _compensationService.Create(employeeId, salary, effectiveDate);

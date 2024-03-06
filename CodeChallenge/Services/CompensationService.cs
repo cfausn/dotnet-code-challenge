@@ -18,17 +18,30 @@ public class CompensationService : ICompensationService
         var employee = _employeeRepository.GetById(employeeId);
         if (employee == null)
         {
-            return null;
+            return null; // Employee must exist to create a compensation
         }
 
-        var compensation = new Compensation
+        // Check if a Compensation already exists for this employee
+        var existingCompensation = _compensationRepository.GetByEmployeeId(employeeId);
+        if (existingCompensation != null)
         {
-            Employee = employee,
-            Salary = salary,
-            EffectiveDate = effectiveDate
-        };
-
-        return _compensationRepository.Create(compensation);
+            // If so, update the existing record instead of creating a new one
+            existingCompensation.Salary = salary;
+            existingCompensation.EffectiveDate = effectiveDate;
+            _compensationRepository.Update(existingCompensation);
+            return existingCompensation;
+        }
+        else
+        {
+            // If no existing Compensation, create a new one
+            var compensation = new Compensation
+            {
+                Employee = employee,
+                Salary = salary,
+                EffectiveDate = effectiveDate
+            };
+            return _compensationRepository.Create(compensation);
+        }
     }
 
 

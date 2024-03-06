@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  codechallenge:
+    build:
+      context: .
+      dockerfile: CodeChallenge/Dockerfile
+    ports:
+      - "8080:80"
+
+  codechallengetests:
+    build:
+      context: .
+      dockerfile: CodeChallenge.Tests/Dockerfile
+    depends_on:
+      - codechallenge
