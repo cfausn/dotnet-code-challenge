@@ -132,5 +132,30 @@ namespace CodeCodeChallenge.Tests.Integration
             // Assert
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
         }
+
+        [TestMethod]
+        public void GetReportingStructure_Returns_ExpectedStructure()
+        {
+            // Arrange
+            // Assuming "John Lennon" is already seeded in your database with the employeeId "16a596ae-edd3-4847-99fe-c4518e82c86f"
+            var expectedEmployeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
+            var expectedNumberOfReports = 4; // Based on your seed data and previous discussions
+
+            // Execute
+            var getRequestTask = _httpClient.GetAsync($"api/employee/reportingStructure/{expectedEmployeeId}");
+            var response = getRequestTask.Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var reportingStructure = response.DeserializeContent<ReportingStructure>();
+            
+            Assert.IsNotNull(reportingStructure);
+            Assert.AreEqual(expectedEmployeeId, reportingStructure.Employee.EmployeeId);
+            Assert.AreEqual(expectedNumberOfReports, reportingStructure.NumberOfReports);
+
+            // Additionally, you may want to assert the structure of the direct reports
+            Assert.AreEqual(2, reportingStructure.Employee.DirectReports.Count); // John has 2 direct reports: Paul and Ringo
+        }
+
     }
 }

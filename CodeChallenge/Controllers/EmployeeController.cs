@@ -58,5 +58,24 @@ namespace CodeChallenge.Controllers
 
             return Ok(newEmployee);
         }
+
+        [HttpGet("reportingStructure/{employeeId}")]
+        public IActionResult GetReportingStructure(string employeeId)
+        {
+            _logger.LogDebug($"Attempting to get reporting structure for employeeId: {employeeId}");
+
+            var employee = _employeeService.GetByIdWithDirectReports(employeeId);
+            if (employee == null)
+            {
+                _logger.LogDebug($"Employee not found for employeeId: {employeeId}");
+                return NotFound();
+            }
+            var reportingStructure = new ReportingStructure
+            {
+                Employee = employee,
+                NumberOfReports = _employeeService.CalculateTotalReports(employee)
+            };
+            return Ok(reportingStructure);
+        }
     }
 }

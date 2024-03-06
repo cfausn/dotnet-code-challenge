@@ -59,5 +59,59 @@ namespace CodeChallenge.Services
 
             return newEmployee;
         }
+
+        public Employee GetByIdWithDirectReports(string employeeId)
+        {
+            var employee = _employeeRepository.GetById(employeeId);
+            if (employee != null)
+            {
+                PopulateDirectReports(employee); 
+            }
+            return employee;
+        }
+
+        private void PopulateDirectReports(Employee employee)
+        {
+            var populatedDirectReports = new List<Employee>();
+
+            if (employee.DirectReports != null && employee.DirectReports.Any())
+            {
+                foreach (var directReport in employee.DirectReports)
+                {
+                    // Recursive call to populate each direct report's own direct reports
+                    var fullDirectReport = _employeeRepository.GetById(directReport.EmployeeId);
+                    if (fullDirectReport != null)
+                    {
+                        PopulateDirectReports(fullDirectReport);  
+                        populatedDirectReports.Add(fullDirectReport);
+                    }
+                }
+
+                // Replace the original direct reports list with the fully populated one
+                employee.DirectReports = populatedDirectReports;
+            }
+        }
+
+
+        public int CalculateTotalReports(Employee employee)
+        {
+            HashSet<string> uniqueReportIds = new HashSet<string>();
+            CountReportsRecursive(employee, uniqueReportIds);
+            return uniqueReportIds.Count;
+        }
+
+        private void CountReportsRecursive(Employee employee, HashSet<string> uniqueReportIds)
+        {
+            if (employee.DirectReports != null)
+            {
+                foreach (var directReport in employee.DirectReports)
+                {
+                    if (uniqueReportIds.Add(directReport.EmployeeId))  // Returns true if the set did not already contain the specified element
+                    {
+                        CountReportsRecursive(directReport, uniqueReportIds);
+                    }
+                }
+            }
+        }
     }
 }
