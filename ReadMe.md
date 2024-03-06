@@ -35,7 +35,6 @@ The following endpoints are available to use:
     * URL: localhost:8080/api/compensation/{employeeId}
     * PAYLOAD: Compensation JSON object excluding Employee object
     * RESPONSE: Compensation JSON object including Employee object
-
 * READ
     * HTTP Method: GET
     * URL: localhost:8080/api/compensation/{employeeId}
@@ -135,7 +134,3 @@ To stop the application and test containers, use the following command in your t
 ```bash
 docker-compose down
 ```
-
-## Delivery
-
-This updated README provides a clear and concise guide for users to understand the functionalities offered by your application, including how to interact with new endpoints related to `ReportingStructure` and `Compensation`. It also introduces the notion of concurrency handling, informing users about the application's behavior in concurrent update scenarios.
